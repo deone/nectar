@@ -106,4 +106,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/home/deone/uploads/nectar/'
+MEDIA_ROOT = '/Users/deone/uploads/nectar/'
