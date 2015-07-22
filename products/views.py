@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import ListView
 
-def index(request):
-    return render(request, 'products/index.html')
+from .models import Product
+
+class ProductList(ListView):
+    model = Product
+    template_name = 'products/index.html'
