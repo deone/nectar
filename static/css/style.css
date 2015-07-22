@@ -590,7 +590,10 @@ span.second{
   background-color: #fafafa;
   text-align: center;
   border-top: solid 1px #eee;
-  min-height: 150px;
+}
+.product-detail h4 {
+  font-size: 100%;
+  min-height: 40px;
 }
 .team-member-info label {
 	display: none;
