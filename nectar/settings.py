@@ -111,3 +111,5 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_ROOT = '/Users/deone/uploads/nectar/'
+
+MEDIA_URL = '/media/'
