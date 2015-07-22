@@ -590,6 +590,7 @@ span.second{
   background-color: #fafafa;
   text-align: center;
   border-top: solid 1px #eee;
+  min-height: 150px;
 }
 .team-member-info label {
 	display: none;
