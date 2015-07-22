@@ -33,7 +33,6 @@ class SubCategory(Common):
 
 class Product(Common):
     subcategory = models.ForeignKey(SubCategory)
-    brand = models.ForeignKey(Brand)
     code = models.CharField(max_length=50, unique=True)
     image = models.ImageField(upload_to="product_images")
     description = models.TextField()
