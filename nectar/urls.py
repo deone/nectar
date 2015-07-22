@@ -18,7 +18,10 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 
+from products.views import ProductList
+
 urlpatterns = [
-    url(r'^$', include('products.urls', namespace="products")),
+    url(r'^$', ProductList.as_view(), name='index'),
+    url(r'^products/', include('products.urls', namespace="products")),
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
