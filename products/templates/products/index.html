@@ -1,1 +1,89 @@
 {% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block primary_content %}
+<!----- start-slider---->
+<!----start-slider-script---->
+<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+<script>
+  // You can also use "$(window).load(function() {"
+  $(function () {
+    // Slideshow 4
+    $("#slider4").responsiveSlides({
+      auto: true,
+      pager: true,
+      nav: true,
+      speed: 500,
+      namespace: "callbacks",
+      before: function () {
+        $('.events').append("<li>before event fired.</li>");
+      },
+      after: function () {
+        $('.events').append("<li>after event fired.</li>");
+      }
+    });
+
+  });
+</script>
+<!----//End-slider-script---->
+
+<!-- Slideshow 4 -->
+<div  id="top" class="callbacks_container">
+  <ul class="rslides" id="slider4">
+    <li>
+      <img src="{% static 'images/argila.jpg' %}" alt="">
+    </li>
+    <li>
+      <img src="{% static 'images/paulmitchell.jpg' %}" alt="">
+    </li>
+    <li>
+      <img src="{% static 'images/indola.jpg' %}" alt="">
+    </li>
+    <li>
+      <img src="{% static 'images/revlon.jpg' %}" alt="">
+    </li>
+    <li>
+      <img src="{% static 'images/olaplex2.jpg' %}" alt="">
+    </li>
+    <li>
+      <img src="{% static 'images/bwentrance.jpg' %}" alt="">
+    </li>
+  </ul>
+</div>
+{% endblock %}
+
+{% block secondary_content %}
+<div>
+  <div class="container features">
+    <div class="section-head text-center">
+      <h3><span class="frist"> </span>NEW PRODUCTS<span class="second"> </span></h3>
+    </div>
+
+    {% for product in new_products %}
+      <div class="col-md-3">
+        <div class="features-grid-info">
+          <div class="team-member-info">
+            <img class="product-pic" src="{{ product.image.url }}" title="{{ product.name }}">
+            <div class="product-detail">
+              <h4><a href="#">{{ product.name }}</a></h4>
+              <ul>
+                <li>
+                  <h5><a href="#">{{ product.subcategory.brand }}</a></h5>
+                  <h6>CODE: {{ product.code }}</h6>
+                </li>
+                <li class="add-to-cart"><a href="#"><i class="fa fa-cart-plus fa-3x"></i></a></li>
+                <div class="clearfix"> </div>
+              </ul>
+            </div>
+            <label class="team-member-caption text-center">
+              <p><a href="#"><i class="fa fa-search-plus fa-4x" title="View Product"></i></a></p>
+            </label>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    <div class="clearfix"> </div>
+  </div>
+</div>
+{% endblock %}
