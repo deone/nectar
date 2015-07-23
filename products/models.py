@@ -1,4 +1,7 @@
 from django.db import models
+from django.utils.text import slugify
+
+from datetime import datetime
 
 class Common(models.Model):
     name = models.CharField(max_length=100, unique=True)
@@ -36,10 +39,16 @@ class Product(Common):
     code = models.CharField(max_length=50, unique=True)
     image = models.ImageField(upload_to="product_images")
     description = models.TextField()
+    slug = models.SlugField(unique=True, editable=False)
+    # date_created = models.DateTimeField(default=datetime.now, editable=False)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Product, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.name
 
+    @models.permalink
     def get_absolute_url(self):
-        from django.core.urlresolvers import reverse
-        return reverse('products:product', args=[str(self.id)])
+        return 'products:product', (self.slug,)
