@@ -36,11 +36,11 @@ class SubCategory(Common):
 
 class Product(Common):
     subcategory = models.ForeignKey(SubCategory)
-    code = models.CharField(max_length=50, unique=True)
+    code = models.IntegerField(unique=True)
     image = models.ImageField(upload_to="product_images")
     description = models.TextField()
     slug = models.SlugField(unique=True, editable=False)
-    # date_created = models.DateTimeField(default=datetime.now, editable=False)
+    date_created = models.DateTimeField(auto_now=True, editable=False)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
