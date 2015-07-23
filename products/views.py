@@ -9,9 +9,10 @@ class ProductList(ListView):
 
 class ProductDetail(DetailView):
     model = Product
+    template_name = 'products/detail.html'
 
     def get_context_data(self, **kwargs):
         context = super(ProductDetail, self).get_context_data(**kwargs)
         # related products
-        context['related_products'] = Products.objects.all()
+        context['related_products'] = Product.objects.all()
         return context
