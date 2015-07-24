@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block primary_content %}
+<div  id="top">
+  <div class="container">
+    <div class="product">
+      <div class="col-md-4">
+        <img src="{{ product.image.url }}">
+      </div>
+      <div class="col-md-8 detail-container">
+        <div class="detail">
+          <h3>{{ product.name }}<a href="#"><i class="fa fa-cart-plus" title="Add To Cart"></i></a></h3>
+          <ul>
+            <li><strong>Brand Name</strong> &mdash; {{ product.subcategory.brand.name }}</li>
+            <li><strong>Category</strong> &mdash; {{ product.subcategory.category.name }}</li>
+            <li><strong>Code</strong> &mdash; {{ product.code }}</li>
+          </ul>
+          <p>{{ product.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block secondary_content %}
+<div>
+  <div class="container features">
+    <div class="section-head text-center">
+      <h3><span class="frist"> </span>Related Products<span class="second"> </span></h3>
+    </div>
+
+    {% for product in related_products %}
+      <div class="col-md-3">
+        <div class="features-grid-info">
+          <div class="team-member-info">
+            <img class="product-pic" src="{{ product.image.url }}" title="{{ product.name }}">
+            <div class="product-detail">
+              <h4><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h4>
+              <ul>
+                <li>
+                  <h5><a href="#">{{ product.subcategory.brand }}</a></h5>
+                  <h6>CODE: {{ product.code }}</h6>
+                </li>
+                <li class="add-to-cart"><a href="#"><i class="fa fa-cart-plus fa-3x"></i></a></li>
+                <div class="clearfix"> </div>
+              </ul>
+            </div>
+            <label class="team-member-caption text-center">
+              <p><a href="{{ product.get_absolute_url }}"><i class="fa fa-search-plus fa-4x" title="View Product"></i></a></p>
+            </label>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    <div class="clearfix"> </div>
+  </div>
+</div>
+{% endblock %}
