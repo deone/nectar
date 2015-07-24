@@ -1,6 +1,6 @@
 from django.views.generic import ListView, DetailView
 
-from .models import Product
+from .models import *
 
 class ProductList(ListView):
     queryset = Product.objects.all()
@@ -17,3 +17,9 @@ class ProductDetail(DetailView):
         # related products
         context['related_products'] = Product.objects.all()[:4]
         return context
+
+class SubCategoryDetail(DetailView):
+    model = SubCategory
+
+class BrandDetail(DetailView):
+    model = Brand

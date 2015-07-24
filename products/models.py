@@ -20,19 +20,37 @@ class Category(Common):
 
 class Brand(Common):
     image = models.ImageField(upload_to="brand_images")
+    slug = models.SlugField(unique=True, editable=False)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Brand, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.name
+
+    @models.permalink
+    def get_absolute_url(self):
+        return 'products:brand', (self.slug,)
 
 class SubCategory(Common):
     brand = models.ForeignKey(Brand)
     category = models.ForeignKey(Category)
+    slug = models.SlugField(unique=True, editable=False)
 
     class Meta:
         verbose_name_plural = "sub-categories"
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(SubCategory, self).save(*args, **kwargs)
+
     def __str__(self):
         return self.name
+
+    @models.permalink
+    def get_absolute_url(self):
+        return 'products:subcategory', (self.slug,)
 
 class Product(Common):
     subcategory = models.ForeignKey(SubCategory)
