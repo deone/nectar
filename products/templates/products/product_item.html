@@ -5,7 +5,11 @@
       <h4><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h4>
       <ul>
         <li>
-          <h5><a href="#">{{ product.subcategory.brand.name }}</a></h5>
+          <h5>
+            <a href="{{ product.subcategory.brand.get_absolute_url }}">
+              {{ product.subcategory.brand.name }}
+            </a>
+          </h5>
           <h6>CODE: {{ product.code }}</h6>
         </li>
         <li class="add-to-cart"><a href="#"><i class="fa fa-cart-plus fa-2x"></i></a></li>
