@@ -593,6 +593,9 @@ span.second{
   font-size: 100%;
   min-height: 40px;
 }
+.product-detail ul li h5  {
+  font-size: .81em;
+}
 .team-member-info label {
 	display: none;
 	position: absolute;

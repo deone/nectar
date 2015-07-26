@@ -63,23 +63,7 @@
     {% for product in new_products %}
       <div class="col-md-3">
         <div class="features-grid-info">
-          <div class="team-member-info">
-            <img class="product-pic" src="{{ product.image.url }}" title="{{ product.name }}">
-            <div class="product-detail">
-              <h4><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h4>
-              <ul>
-                <li>
-                  <h5><a href="#">{{ product.subcategory.brand.name }}</a></h5>
-                  <h6>CODE: {{ product.code }}</h6>
-                </li>
-                <li class="add-to-cart"><a href="#"><i class="fa fa-cart-plus fa-3x"></i></a></li>
-                <div class="clearfix"> </div>
-              </ul>
-            </div>
-            <label class="team-member-caption text-center">
-              <p><a href="{{ product.get_absolute_url }}"><i class="fa fa-search-plus fa-4x" title="View Product"></i></a></p>
-            </label>
-          </div>
+          {% include "products/product_item.html" %}
         </div>
       </div>
     {% endfor %}
