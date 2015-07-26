@@ -10,7 +10,7 @@ class Common(models.Model):
         abstract = True
 
 class Category(Common):
-    pass
+    image = models.ImageField(upload_to="category_images")
 
     class Meta:
         verbose_name_plural = "categories"

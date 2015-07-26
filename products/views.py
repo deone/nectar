@@ -20,7 +20,8 @@ class SubCategoryDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(SubCategoryDetail, self).get_context_data(**kwargs)
-        context['products'] = Product.objects.all()
+        subcategory = self.get_object()
+        context['products'] = Product.objects.filter(subcategory=subcategory)
         return context
 
 class BrandDetail(DetailView):
@@ -28,5 +29,6 @@ class BrandDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(BrandDetail, self).get_context_data(**kwargs)
-        context['products'] = Product.objects.all()
+        brand = self.get_object()
+        context['products'] = Product.objects.filter(subcategory__brand=brand)
         return context
