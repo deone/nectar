@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block secondary_content %}
+<div>
+  <div class="container features">
+    <div class="section-head text-center">
+      <h3><span class="frist"></span>{% block heading %}{% endblock %}<span class="second"></span></h3>
+    </div>
+
+    <div class="col-md-3">
+      {% block product_group_image %}{% endblock %}
+    </div>
+
+    <div class="col-md-9">
+      {% block product_list %}
+        {% for product in products %}
+        <div class="col-sm-3">
+          <div class="features-grid-info">
+            <div class="team-member-info">
+              <img class="product-pic" src="{{ product.image.url }}" title="{{ product.name }}">
+              <div class="product-detail">
+                <h4><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h4>
+                <ul>
+                  <li>
+                    <h5><a href="#">{{ product.subcategory.brand.name }}</a></h5>
+                    <h6>CODE: {{ product.code }}</h6>
+                  </li>
+                  <li class="add-to-cart"><a href="#"><i class="fa fa-cart-plus fa-2x"></i></a></li>
+                  <div class="clearfix"> </div>
+                </ul>
+              </div>
+              <label class="team-member-caption text-center">
+                <p><a href="{{ product.get_absolute_url }}"><i class="fa fa-search-plus fa-2x" title="View Product"></i></a></p>
+              </label>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      {% endblock %}
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+{% endblock %}

@@ -20,3 +20,8 @@ class SubCategoryDetail(DetailView):
 
 class BrandDetail(DetailView):
     model = Brand
+
+    def get_context_data(self, **kwargs):
+        context = super(BrandDetail, self).get_context_data(**kwargs)
+        context['products'] = Product.objects.all()
+        return context

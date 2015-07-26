@@ -1,0 +1,9 @@
+{% extends 'products/product_list_base.html' %}
+
+{% load staticfiles %}
+
+{% block heading %}{{ brand.name }}{% endblock %}
+
+{% block product_group_image %}
+  <img src="{{ brand.image.url }}">
+{% endblock %}
