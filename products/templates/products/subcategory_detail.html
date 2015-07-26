@@ -1,0 +1,9 @@
+{% extends 'products/product_list_base.html' %}
+
+{% load staticfiles %}
+
+{% block heading %}{{ subcategory.category.name }}{% endblock %}
+
+{% block product_group_image %}
+  <img src="{{ subcategory.category.image.url }}">
+{% endblock %}
