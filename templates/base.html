@@ -61,12 +61,34 @@
             <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" title="logo" /></a>
           </div> <!-- logo -->
           <ul class="col-md-8">
-            <li class="col-sm-2"><a href="#">Home</a></li>
-            <li class="col-sm-2"><a href="#">About Us</a></li>
-            <li class="col-sm-2"><a href="#">Brands</a></li>
-            <li class="col-sm-2"><a href="#">Product Lines</a></li>
-            <li class="col-sm-2"><a href="#">Contact Us</a></li>
-            <li class="col-sm-2"><a href="#">Careers</a></li>
+            <li class="col-sm-2"><a class="main" href="#">Home</a></li>
+            <li class="col-sm-2"><a class="main" href="#">About Us</a></li>
+            <li class="col-sm-2">
+              <a class="main dropdown-toggle" href="#" id="brands" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Brands 
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="brands">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <a class="main dropdown-toggle" href="#" id="product-lines" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Product Lines
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="product-lines">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2"><a class="main" href="#">Contact Us</a></li>
+            <li class="col-sm-2"><a class="main" href="#">Careers</a></li>
           </ul> <!-- nav -->
           <div class="cart col-md-2"></div> <!-- cart -->
           <div class="clearfix"></div>
@@ -157,6 +179,7 @@
         </div>
       </div>
     </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
 
