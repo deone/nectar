@@ -8,8 +8,6 @@ class ProductList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ProductList, self).get_context_data(**kwargs)
-        context['brands'] = Brand.objects.all()
-        context['subcategories'] = SubCategory.objects.all()
         return context
 
 class ProductDetail(DetailView):
@@ -19,8 +17,6 @@ class ProductDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(ProductDetail, self).get_context_data(**kwargs)
         context['related_products'] = Product.objects.all()[:4]
-        context['brands'] = Brand.objects.all()
-        context['subcategories'] = SubCategory.objects.all()
         return context
 
 class SubCategoryDetail(DetailView):
@@ -30,8 +26,6 @@ class SubCategoryDetail(DetailView):
         context = super(SubCategoryDetail, self).get_context_data(**kwargs)
         subcategory = self.get_object()
         context['products'] = Product.objects.filter(subcategory=subcategory)
-        context['brands'] = Brand.objects.all()
-        context['subcategories'] = SubCategory.objects.all()
         return context
 
 class BrandDetail(DetailView):
@@ -41,6 +35,4 @@ class BrandDetail(DetailView):
         context = super(BrandDetail, self).get_context_data(**kwargs)
         brand = self.get_object()
         context['products'] = Product.objects.filter(subcategory__brand=brand)
-        context['brands'] = Brand.objects.all()
-        context['subcategories'] = SubCategory.objects.all()
         return context
