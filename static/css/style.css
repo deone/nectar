@@ -468,7 +468,7 @@ nav a#pull {
   background: #fff;
   list-style: none;
 }
-.header ul li a.main {
+.header ul li a {
   display: block;
   border-right: solid 1px #fafafa;
   line-height: 3em;
