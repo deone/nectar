@@ -55,32 +55,41 @@
 
   <body>
     <div class="header-section">
-      <div class="header">
-        <div class="container">
-          <div class="top-header">
-            <div class="logo">
-              <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" title="logo" /></a>
-            </div>
-            <!----start-top-nav---->
-            <nav class="top-nav">
-              <ul class="top-nav">
-                <li class="active"><a href="#home" class="scroll">Home </a></li>
-                <li class="page-scroll"><a href="#fea" class="scroll">FEATURES</a></li>
-                <li class="page-scroll"><a href="#gallery" class="scroll">Gallery</a></li>
-                <li class="page-scroll"><a href="#about" class="scroll">About </a></li>
-                <li class="contatct-active" class="page-scroll"><a href="#contact" class="scroll">Contact</a></li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-shopping-cart fa-2x"></i>
-                    <span>(230)</span>
-                  </a>
-                </li>
-              </ul>
-              <a href="#" id="pull"><img src="{% static 'images/nav-icon.png' %}" title="menu" /></a>
-            </nav>
-            <div class="clearfix"> </div>
-          </div>
+      <div class="container">
+        <div class="header">
+          <div class="logo col-md-2">
+            <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" title="logo" /></a>
+          </div> <!-- logo -->
+          <ul class="col-md-8">
+            <li class="col-sm-2"><a href="#">Home</a></li>
+            <li class="col-sm-2"><a href="#">About Us</a></li>
+            <li class="col-sm-2"><a href="#">Brands</a></li>
+            <li class="col-sm-2"><a href="#">Product Lines</a></li>
+            <li class="col-sm-2"><a href="#">Contact Us</a></li>
+            <li class="col-sm-2"><a href="#">Careers</a></li>
+          </ul> <!-- nav -->
+          <div class="cart col-md-2"></div> <!-- cart -->
+          <div class="clearfix"></div>
         </div>
+
+        <!-- <div class="logo" style="background: #ff0;">
+          <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" title="logo" /></a>
+        </div>
+        <div class="top-header" style="width: 70%; float: left;">
+          <nav class="top-nav">
+            <ul class="top-nav">
+              
+              <li>
+                <a href="#">
+                  <i class="fa fa-shopping-cart fa-2x"></i>
+                  <span>(230)</span>
+                </a>
+              </li>
+            </ul>
+            <a href="#" id="pull"><img src="{% static 'images/nav-icon.png' %}" title="menu" /></a>
+          </nav>
+          <div class="clearfix"></div>
+        </div> -->
       </div>
 
       {% block primary_content %}{% endblock %}

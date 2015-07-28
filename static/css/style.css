@@ -11,24 +11,13 @@ body a {
 	-ms-transition:0.5s all;
 }
 /*-----start-header----*/
-.logo{
-	float: left;
-	margin-top: 0.25em;
-}
-.logo a{
-	color: #FFF;
-	font-weight: 700;
-}
-.logo a:hover{
-	text-decoration:none;
-}
+
 .logo320{
 	display:none;
 }
 /*----navbar-nav----*/
 .top-header {
 	background: #fff;
-	padding: 0.7em 1.5em;
 	margin: 3.5em 0 0 0;
 }
 .top-header,
@@ -39,24 +28,16 @@ body a {
   -o-box-shadow: 0px 0px 4px #C9C9C9;
   -ms-box-shadow: 0px 0px 4px #C9C9C9;
 }
-.top-nav ul li a{
-	color: #7E7C7E;
-	padding: 0.2em 1.5em;
-	font-size: 0.9em;
-	font-weight: 400;
-	text-align: center;
-	text-transform: uppercase;
-	position: relative;
-	font-weight: 700;
+/* .top-nav ul li a {
+  color: #7E7C7E;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
 }
 .top-nav ul li.active a,
-.top-nav ul li a:hover{
+.top-nav ul li a:hover {
 	color:#282528;
 }
-.logo a{
-	display:block;
-}
-/* top-nav */
 .top-nav:before,
 .top-nav:after {
     content: " ";
@@ -64,15 +45,15 @@ body a {
 }
 .top-nav:after {
     clear: both;
-}
+} */
 nav {
 	position: relative;
 	float: right;
 }
 nav ul {
-	padding: 0;
 	float: right;
-	margin: 0.75em 0;
+        margin: 0;
+        padding: 0;
 }
 nav li {
 	display: inline;
@@ -80,13 +61,12 @@ nav li {
 	position:relative;
 }
 nav a {
-	color: #fff;
 	display: inline-block;
 	text-align: center;
 	text-decoration: none;
-	line-height: 40px;
+        padding: .8em;
 }
-nav a:hover{
+nav a:hover {
 	text-decoration:none;
 	color:#00A2C1;
 }
@@ -465,8 +445,40 @@ nav a#pull {
 }
 .header-section {
   background: #fafafa;
-  padding-bottom: 2em;
+  padding-bottom: 3.5em;
   position:relative;
+}
+.header {
+  margin: 3.5em 0 0 0;
+}
+.logo {
+  margin-top: -.5em;
+}
+.header ul,
+.header ul li {
+  margin: 0;
+  padding: 0;
+}
+.header ul {
+  box-shadow: 0px 0px 4px #C9C9C9;
+  -webkit-box-shadow: 0px 0px 4px #C9C9C9;
+  -moz-box-shadow: 0px 0px 4px #C9C9C9;
+  -o-box-shadow: 0px 0px 4px #C9C9C9;
+  -ms-box-shadow: 0px 0px 4px #C9C9C9;
+  background: #fff;
+  list-style: none;
+}
+.header ul li a {
+  display: block;
+  border-right: solid 1px #fafafa;
+  line-height: 3em;
+  text-align: center;
+}
+.header ul li a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.header .cart {
 }
 /*----//slider----*/
 /*-----features----*/
