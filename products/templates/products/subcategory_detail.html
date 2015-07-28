@@ -5,5 +5,7 @@
 {% block heading %}{{ subcategory.category.name }}{% endblock %}
 
 {% block product_group_image %}
-  <img src="{{ subcategory.category.image.url }}">
+  <div style="background-color: #fafafa; height: 310px;">
+    {{ subcategory.category.name }}
+  </div>
 {% endblock %}
