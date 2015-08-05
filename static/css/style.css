@@ -46,33 +46,6 @@ body a {
 .top-nav:after {
     clear: both;
 } */
-nav {
-	position: relative;
-	float: right;
-}
-nav ul {
-	float: right;
-        margin: 0;
-        padding: 0;
-}
-nav li {
-	display: inline;
-	float: left;
-	position:relative;
-}
-nav a {
-	display: inline-block;
-	text-align: center;
-	text-decoration: none;
-        padding: .8em;
-}
-nav a:hover {
-	text-decoration:none;
-	color:#00A2C1;
-}
-nav a#pull {
-	display: none;
-}
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 768px) {
 	nav { 
@@ -472,7 +445,8 @@ nav a#pull {
   display: block;
   border-right: solid 1px #fafafa;
   line-height: 3em;
-  text-align: center;
+  text-align: left;
+  padding-left: 1em;
 }
 .header ul li a:hover {
   text-decoration: none;
@@ -1284,6 +1258,8 @@ p.copy a:hover{
 		padding: 0em 0 0 0;
 	}
 }
+
+/* ====================================== */
 
 .product {
   background: #fff;

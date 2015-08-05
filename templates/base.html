@@ -59,15 +59,25 @@
         <div class="header">
           <div class="logo col-md-2">
             <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" title="logo" /></a>
-          </div> <!-- logo -->
+          </div>
           <ul class="col-md-8">
             <li class="col-sm-2"><a href="{% url 'index' %}">Home</a></li>
-            <li class="col-sm-2"><a href="#">About Us</a></li>
+            <li class="col-sm-2">
+              <a href="#" class="dropdown-toggle" id="aboutdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                About Us 
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutdropdown">
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">News</a></li>
+              </ul>
+            </li>
             <li class="col-sm-2"><a href="#">Brands</a></li>
             <li class="col-sm-2"><a href="#">Product Lines</a></li>
-            <li class="col-sm-2"><a href="#">Contact Us</a></li>
             <li class="col-sm-2"><a href="#">Careers</a></li>
-          </ul> <!-- nav -->
+            <li class="col-sm-2"><a href="#">Contact Us</a></li>
+          </ul>
           <div class="cart col-md-2"></div> <!-- cart -->
           <div class="clearfix"></div>
         </div>
@@ -83,21 +93,19 @@
     <div class="footer">
       <div class="container">
         <div class="footer-grids">
-          <div class="col-md-3 footer-grid about-info">
-            <p>eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-
-          <div class="col-md-3 footer-grid subscribe">
-            <h3>Subscribe</h3>
-            <form>
-              <input type="text" placeholder="" required />
-              <input type="submit" value="" />
-            </form>
-            <p>eusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-          </div>
+          <div class="col-md-3 footer-grid explore">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Salon Furniture &amp; 3D Design</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div> 
 
           <div class="col-md-3 footer-grid explore">
-            <h3>Explore</h3>
+            <h3>Product Categories</h3>
             <ul class="col-md-6">
               <li><a href="#">Envato</a></li>
               <li><a href="#">Themecurve</a></li>
@@ -113,11 +121,22 @@
             <div class="clearfix"> </div>
           </div>
 
-          <div class="col-md-3 footer-grid copy-right">
-            <p>Eusmod tempor incididunt ut labore et dolore magna aliqua. ut labore et dolore magna aliqua. </p>
-            <p class="copy">Template by <a href="http://w3layouts.com/">w3layouts</a></p>
+          <div class="col-md-3 footer-grid">
+            <h3>Browse By Brand</h3>
+            <form>
+              <select class="form-control"> 
+                <option value="">Select Brand</option>
+                <option value="">Alter Ego</option>
+              </select>
+            </form>
           </div>
-          <div class="clearfix"> </div>
+
+          <div class="col-md-3 footer-grid">
+            <h3>Connect With Us</h3>
+            <p>Eusmod tempor incididunt ut labore et dolore magna aliqua. ut labore et dolore magna aliqua. </p>
+          </div>
+
+          <div class="clearfix"></div>
 
           <script type="text/javascript">
                   $(document).ready(function() {
@@ -138,6 +157,7 @@
         </div>
       </div>
     </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
 
