@@ -444,9 +444,8 @@ body a {
 .header ul li a {
   display: block;
   border-right: solid 1px #fafafa;
+  text-align: center;
   line-height: 3em;
-  text-align: left;
-  padding-left: 1em;
 }
 .header ul li a:hover {
   text-decoration: none;
