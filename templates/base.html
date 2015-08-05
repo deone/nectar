@@ -68,15 +68,15 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu" aria-labelledby="aboutdropdown">
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">News</a></li>
+                <li><a href="{% url 'our-team' %}">Our Team</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'news' %}">News</a></li>
               </ul>
             </li>
-            <li class="col-sm-2"><a href="#">Brands</a></li>
-            <li class="col-sm-2"><a href="#">Product Lines</a></li>
-            <li class="col-sm-2"><a href="#">Careers</a></li>
-            <li class="col-sm-2"><a href="#">Contact Us</a></li>
+            <li class="col-sm-2"><a href="{% url 'brands' %}">Brands</a></li>
+            <li class="col-sm-2"><a href="{% url 'product-lines' %}">Product Lines</a></li>
+            <li class="col-sm-2"><a href="{% url 'careers' %}">Careers</a></li>
+            <li class="col-sm-2"><a href="{% url 'contact-us' %}">Contact Us</a></li>
           </ul>
           <div class="cart col-md-2"></div> <!-- cart -->
           <div class="clearfix"></div>

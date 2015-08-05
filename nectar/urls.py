@@ -17,11 +17,19 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.views.generic import TemplateView
 
 from products.views import ProductList
 
 urlpatterns = [
     url(r'^$', ProductList.as_view(), name='index'),
+    url(r'^our-team/', TemplateView.as_view(template_name="team.html"), name="our-team"),
+    url(r'^services/', TemplateView.as_view(template_name="services.html"), name="services"),
+    url(r'^news/', TemplateView.as_view(template_name="news.html"), name="news"),
+    url(r'^brands/', TemplateView.as_view(template_name="brands.html"), name="brands"),
+    url(r'^product-lines/', TemplateView.as_view(template_name="product-lines.html"), name="product-lines"),
+    url(r'^careers/', TemplateView.as_view(template_name="careers.html"), name="careers"),
+    url(r'^contact-us/', TemplateView.as_view(template_name="contact.html"), name="contact-us"),
     url(r'^products/', include('products.urls', namespace="products")),
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
