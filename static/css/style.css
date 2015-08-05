@@ -1314,3 +1314,12 @@ p.copy a:hover{
 .detail p {
   padding-top: .5em;
 }
+
+.static {
+  line-height: 2;
+}
+
+.static h4 {
+  margin-top: 2em;
+  font-weight: 700;
+}
