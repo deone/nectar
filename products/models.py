@@ -39,7 +39,7 @@ class SubCategory(Common):
     slug = models.SlugField(unique=True, editable=False)
 
     class Meta:
-        verbose_name_plural = "sub-categories"
+        verbose_name_plural = "subcategories"
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

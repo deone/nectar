@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^product-lines/', TemplateView.as_view(template_name="product-lines.html"), name="product-lines"),
     url(r'^careers/', TemplateView.as_view(template_name="careers.html"), name="careers"),
     url(r'^contact-us/', TemplateView.as_view(template_name="contact.html"), name="contact-us"),
+    url(r'^cart/', include('cart.urls', namespace="cart")),
     url(r'^products/', include('products.urls', namespace="products")),
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
