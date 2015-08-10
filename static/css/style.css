@@ -1355,3 +1355,7 @@ p.copy a:hover{
 .qty-delete .delete {
   padding-top: .5em;
 }
+
+.cart i span {
+  font-size: 80%;
+}
