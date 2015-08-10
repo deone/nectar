@@ -462,7 +462,7 @@ body a {
   color: #777;
   text-decoration: none;
 }
-.section-head{
+.section-head {
 	text-align:center;
 	padding:2em 0;
 }
@@ -1302,7 +1302,7 @@ p.copy a:hover{
   font-size: 85%;
 }
 
-.detail ul {
+.detail ul, .cart-item ul {
   padding-left: 0;
   list-style: none;
 }
@@ -1322,4 +1322,36 @@ p.copy a:hover{
 .static h4 {
   margin-top: 2em;
   font-weight: 700;
+}
+
+.cart-item {
+  margin-bottom: 1.5em;
+  padding: 1em 1em 1em 0;
+  background: #fafafa;
+}
+
+.cart-item img {
+  width: 100%;
+}
+
+.qty-delete {
+  border-left: solid 1px #ccc;
+}
+
+.qty-delete span {
+  display: block;
+  margin-left: .8em;
+}
+
+.qty-delete input {
+  width: 3em;
+  text-align: center;
+}
+
+.qty-delete .qty {
+  padding-bottom: .3em;
+}
+
+.qty-delete .delete {
+  padding-top: .5em;
 }

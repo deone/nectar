@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Request Quote{% endblock %}
+
+{% block primary_content %}{% endblock %}
+
+{% block secondary_content %}
+<div class="container features">
+  <div class="section-head text-center">
+    <h3><span class="frist"></span>Request Quote<span class="second"></span></h3>
+  </div>
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8">
+    <div class="row cart-item">
+      <div class="col-sm-2">
+        <img src="{% static 'images/1200977.jpg' %}">
+      </div>
+      <div class="col-sm-9">
+        <h4>Mahogany 5/5</h4>
+        <ul>
+          <li><strong>Brand Name</strong> &ndash; Alter Ego</li>
+          <li><strong>Code</strong> &ndash; 8383878</li>
+        </ul>
+      </div>
+      <div class="col-sm-1 qty-delete">
+        <span class="qty">Qty</span>
+        <input type="text" name="quantity">
+        <span class="delete">
+          <a href="#"><i class="fa fa-trash-o fa-2x"></i></a>
+        </span>
+      </div>
+    </div>
+
+    <div class="row cart-item">
+      <div class="col-sm-2">
+        <img src="{% static 'images/1200977.jpg' %}">
+      </div>
+      <div class="col-sm-9">
+        <h4>Mahogany 5/5</h4>
+        <ul>
+          <li><strong>Brand Name</strong> &ndash; Alter Ego</li>
+          <li><strong>Code</strong> &ndash; 8383878</li>
+        </ul>
+      </div>
+      <div class="col-sm-1" style="border-left: solid 1px #ccc;">
+        <span style="display: block; margin-left: .6em; padding-bottom: 0.3em;">Qty</span>
+        <input type="text" name="quantity" style="width: 48px; text-align: center;">
+        <span style="display: block; margin-left: .8em; padding-top: 0.5em;">
+          <a href="#"><i class="fa fa-trash-o fa-2x"></i></a>
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <form action="" method="post" style="background: #ff0">
+        <div class="form-group">
+          <label for="">Full Name</label>
+          <input type="text" placeholder="Full Name" class="form-control">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-2">
+  </div>
+</div>
+{% endblock %}
