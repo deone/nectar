@@ -1,25 +1,16 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
+from .helpers import *
+
 from products.models import Product
 
 def index(request):
     context = {}
     return render(request, 'cart/index.html', context)
 
-def to_dict(product):
-    return {
-        'product_pk': product.pk,
-        'name': product.name,
-        'code': product.code,
-        'brand': product.subcategory.brand.name
-    }
-
 def add(request, id):
-    try:
-        cart = request.session['cart']
-    except:
-        cart = None
+    cart = fetch_cart(request)
 
     product = Product.objects.get(id=id)
     product_dict = {product.pk: {'product_pk': product.pk, 'quantity': 1, 'product': to_dict(product)}}

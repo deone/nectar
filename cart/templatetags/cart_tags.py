@@ -1,11 +1,12 @@
 from django import template
 
-from ..cart import Cart
+from ..helpers import fetch_cart
 
 import datetime
 
 
 register = template.Library()
+
 
 @register.assignment_tag(takes_context=True)
 def get_cart(context):
@@ -20,10 +21,9 @@ def get_cart(context):
 def get_cart_count(context):
     request = context['request']
 
-    try:
-        cart = request.session['cart']
-    except:
-        cart = None
+    cart = fetch_cart(request)
+
+    if cart is None:
         return 0
     else:
         return len(cart)
