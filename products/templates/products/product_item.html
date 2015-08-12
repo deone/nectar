@@ -12,7 +12,9 @@
           </h5>
           <h6>CODE: {{ product.code }}</h6>
         </li>
-        <li class="add-to-cart"><a href="#"><i class="fa fa-cart-plus fa-2x"></i></a></li>
+        <li class="add-to-cart">
+          <a href="{% url 'cart:item-add' product.id %}"><i class="fa fa-cart-plus fa-2x"></i></a>
+        </li>
         <div class="clearfix"></div>
       </ul>
     </div>
