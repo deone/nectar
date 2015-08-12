@@ -1344,8 +1344,12 @@ p.copy a:hover{
 }
 
 .qty-delete input {
-  width: 3em;
+  width: 2.9em;
   text-align: center;
+}
+
+.qty-delete button {
+  font-size: 70%;
 }
 
 .qty-delete .qty {

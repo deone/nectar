@@ -19,34 +19,38 @@
     {% get_cart as cart %}
     {% if cart %}
       {% for item in cart %}
-        <div class="row cart-item">
-          <div class="col-sm-2">
-            <img src="{{ item.product.image }}">
-          </div>
-          <div class="col-sm-9">
-            <h4>{{ item.product.name }}</h4>
-            <ul>
-              <li><strong>Brand Name</strong> &ndash; {{ item.product.brand }}</li>
-              <li><strong>Code</strong> &ndash; {{ item.product.code }}</li>
-            </ul>
-          </div>
-          <div class="col-sm-1 qty-delete">
-            <span class="qty">Qty</span>
+      <div class="row cart-item">
+        <div class="col-sm-2">
+          <img src="{{ item.product.image }}">
+        </div>
+        <div class="col-sm-8">
+          <h4>{{ item.product.name }}</h4>
+          <ul>
+            <li><strong>Brand Name</strong> &ndash; {{ item.product.brand }}</li>
+            <li><strong>Code</strong> &ndash; {{ item.product.code }}</li>
+          </ul>
+        </div>
+        <div class="col-sm-2 qty-delete">
+          <span class="qty">Qty</span>
+          <form action="{% url 'cart:item-set-qty' item.product_pk %}" method="post">
+            {% csrf_token %}
             <input type="text" name="quantity" value="{{ item.quantity }}">
-            <span class="delete">
-              <a href="{% url 'cart:item-remove' item.product_pk %}"><i class="fa fa-trash-o fa-2x"></i></a>
-            </span>
-          </div>
-        </div>
-        <div class="row">
-          <form action="" method="post">
-            <div class="form-group">
-              <label for="">Full Name</label>
-              <input type="text" placeholder="Full Name" class="form-control">
-            </div>
+            <button type="submit" class="btn btn-primary">Set</button>
           </form>
+          <span class="delete">
+            <a href="{% url 'cart:item-remove' item.product_pk %}"><i class="fa fa-trash-o fa-2x"></i></a>
+          </span>
         </div>
+      </div>
       {% endfor %}
+      <div class="row">
+        <form action="" method="post">
+          <div class="form-group">
+            <label for="">Full Name</label>
+            <input type="text" placeholder="Full Name" class="form-control">
+          </div>
+        </form>
+      </div>
     {% else %}
       <p>Please select at least one product to be able to request quotation. <a href="{% url 'index' %}">Continue Product Selection</a>
     {% endif %}
