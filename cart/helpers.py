@@ -11,5 +11,6 @@ def to_dict(product):
         'product_pk': product.pk,
         'name': product.name,
         'code': product.code,
-        'brand': product.subcategory.brand.name
+        'brand': product.subcategory.brand.name,
+        'image': product.image.url
     }

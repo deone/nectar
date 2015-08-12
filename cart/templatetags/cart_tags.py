@@ -13,7 +13,7 @@ def get_cart(context):
     request = context['request']
     cart = fetch_cart(request)
 
-    return cart
+    return cart.values()
 
 @register.assignment_tag(takes_context=True)
 def get_cart_count(context):

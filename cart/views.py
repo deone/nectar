@@ -28,5 +28,14 @@ def add(request, id):
 
     return redirect(request.META['HTTP_REFERER'])
 
-def remove(request):
-    pass
+def remove(request, id):
+    cart = fetch_cart(request)
+
+    id = str(id)
+    if cart:
+        if id in cart:
+            del cart[id]
+
+    request.session['cart'] = cart
+
+    return redirect(request.META['HTTP_REFERER'])
