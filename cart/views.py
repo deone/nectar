@@ -39,3 +39,19 @@ def remove(request, id):
     request.session['cart'] = cart
 
     return redirect(request.META['HTTP_REFERER'])
+
+def set_quantity(request, id):
+    quantity = int(request.POST['quantity'])
+    if quantity < 0:
+        raise ValueError('Quantity must be positive when updating cart')
+
+    id = str(id)
+    cart = fetch_cart(request)
+
+    if id in cart.keys():
+        cart[id]['quantity'] = quantity
+        if cart[id]['quantity'] < 1:
+            del cart[id]
+        request.session['cart'] = cart
+
+    return redirect('cart:index')
