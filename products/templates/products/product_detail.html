@@ -13,7 +13,7 @@
       </div>
       <div class="col-md-8 detail-container">
         <div class="detail">
-          <h3>{{ product.name }}<a href="#"><i class="fa fa-cart-plus" title="Add To Cart"></i></a></h3>
+          <h3>{{ product.name }}<a href="{% url 'cart:item-add' product.id %}"><i class="fa fa-cart-plus" title="Add To Cart"></i></a></h3>
           <ul>
             <li><strong>Brand Name</strong> &ndash; {{ product.subcategory.brand.name }}</li>
             <li><strong>Category</strong> &ndash; {{ product.subcategory.category.name }}</li>
