@@ -2,6 +2,8 @@
 
 {% load staticfiles %}
 
+{% load cart_tags %}
+
 {% block title %}Request Quote{% endblock %}
 
 {% block primary_content %}{% endblock %}
@@ -13,6 +15,7 @@
   </div>
   <div class="col-md-2">
   </div>
+  {% get_cart as cart %}
   <div class="col-md-8">
     <div class="row cart-item">
       <div class="col-sm-2">

@@ -11,9 +11,7 @@ register = template.Library()
 @register.assignment_tag(takes_context=True)
 def get_cart(context):
     request = context['request']
-    cart = request.session['cart']
-
-    print('cart', cart)
+    cart = fetch_cart(request)
 
     return cart
 
