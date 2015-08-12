@@ -19,6 +19,11 @@ def get_cart(context):
 @register.assignment_tag(takes_context=True)
 def get_cart_count(context):
     request = context['request']
-    cart = request.session['cart']
 
-    return len(cart)
+    try:
+        cart = request.session['cart']
+    except:
+        cart = None
+        return 0
+    else:
+        return len(cart)

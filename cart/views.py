@@ -7,6 +7,14 @@ def index(request):
     context = {}
     return render(request, 'cart/index.html', context)
 
+def to_dict(product):
+    return {
+        'product_pk': product.pk,
+        'name': product.name,
+        'code': product.code,
+        'brand': product.subcategory.brand.name
+    }
+
 def add(request, id):
     try:
         cart = request.session['cart']
@@ -14,7 +22,7 @@ def add(request, id):
         cart = None
 
     product = Product.objects.get(id=id)
-    product_dict = {product.pk: {'product_pk': product.pk, 'quantity': 1}}
+    product_dict = {product.pk: {'product_pk': product.pk, 'quantity': 1, 'product': to_dict(product)}}
 
     if cart:
         pk = str(product.pk)
@@ -23,7 +31,7 @@ def add(request, id):
         else:
             cart.update(product_dict)
     else:
-        request.session['cart'] = product_dict
+        cart = product_dict
 
     request.session['cart'] = cart
 
