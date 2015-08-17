@@ -5,53 +5,36 @@
 {% block title %}Home{% endblock %}
 
 {% block primary_content %}
-<!----- start-slider---->
-<!----start-slider-script---->
 <script src="{% static 'js/responsiveslides.min.js' %}"></script>
 <script>
-  // You can also use "$(window).load(function() {"
   $(function () {
-    // Slideshow 4
-    $("#slider4").responsiveSlides({
-      auto: true,
-      pager: true,
-      nav: true,
-      speed: 500,
-      namespace: "callbacks",
-      before: function () {
-        $('.events').append("<li>before event fired.</li>");
-      },
-      after: function () {
-        $('.events').append("<li>after event fired.</li>");
-      }
-    });
-
+    $(".rslides").responsiveSlides({});
   });
 </script>
-<!----//End-slider-script---->
 
-<!-- Slideshow 4 -->
-<div  id="top" class="callbacks_container">
-  <ul class="rslides" id="slider4">
-    <li>
-      <img src="{% static 'images/argila.jpg' %}" alt="">
-    </li>
-    <li>
-      <img src="{% static 'images/paulmitchell.jpg' %}" alt="">
-    </li>
-    <li>
-      <img src="{% static 'images/indola.jpg' %}" alt="">
-    </li>
-    <li>
-      <img src="{% static 'images/revlon.jpg' %}" alt="">
-    </li>
-    <li>
-      <img src="{% static 'images/olaplex2.jpg' %}" alt="">
-    </li>
-    <li>
-      <img src="{% static 'images/bwentrance.jpg' %}" alt="">
-    </li>
-  </ul>
+<div class="container">
+  <div class="row slides">
+    <ul class="rslides">
+      <li>
+        <img src="{% static 'images/argila.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/paulmitchell.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/indola.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/revlon.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/olaplex2.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/bwentrance.jpg' %}" alt="">
+      </li>
+    </ul>
+  </div>
 </div>
 {% endblock %}
 
