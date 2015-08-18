@@ -494,7 +494,7 @@ span.second{
 	font-size: 1.1em;
 }
 /*----features-grids----*/
-.features-grid-info{
+.features-grid-info {
 	margin:1em 0;
 }
 .features-icon span{
@@ -1373,4 +1373,16 @@ p.copy a:hover{
 
 .slides {
   margin-top: 2em;
+}
+
+.features-grid-info h5 {
+  font-weight: bold;
+}
+
+.category-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: .5em;
+  font-size: 80%;
 }

@@ -39,6 +39,7 @@ class BrandDetail(DetailView):
 
 class CategoryList(ListView):
     model = Category
+    context_object_name = 'categories'
 
     def get_context_data(self, **kwargs):
         context = super(CategoryList, self).get_context_data(**kwargs)

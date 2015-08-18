@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Product Lines{% endblock %}
+
+{% block secondary_content %}
+<div class="container features">
+  <div class="section-head text-center">
+    <h3><span class="frist"></span>Product Lines<span class="second"></span></h3>
+  </div>
+  {% for category in categories %}
+  <div class="col-md-2">
+    <div class="features-grid-info">
+      <h5>{{ category.name }}</h5>
+      <ul class="category-list">
+      {% for subcat in category.subcategory_set.all %}
+        <li><a href="{{subcat.get_absolute_url}}">{{ subcat.name }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
