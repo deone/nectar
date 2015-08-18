@@ -1396,6 +1396,7 @@ p.copy a:hover{
   background: url('../images/leather.jpg');
   height: 183px;
   padding-right: .5em;
+  padding-left: .5em;
   padding-top: 6.5em;
 }
 
@@ -1403,4 +1404,14 @@ p.copy a:hover{
   font-size: 1.6em;
   font-weight: 800;
   color: #fff;
+}
+
+.brand a {
+  display: block;
+  border: solid 1px #fafafa;
+  margin-bottom: 2em;
+}
+
+.brand a:hover {
+  border: solid 1px #eee;
 }
