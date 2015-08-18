@@ -1379,7 +1379,6 @@ p.copy a:hover{
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: .5em;
   font-size: 80%;
 }
 
@@ -1390,4 +1389,18 @@ p.copy a:hover{
 .social a:hover,
 .social a:visited {
   text-decoration: none;
+}
+
+.product-group-image {
+  text-align: right;
+  background: url('../images/leather.jpg');
+  height: 183px;
+  padding-right: .5em;
+  padding-top: 6.5em;
+}
+
+.product-group-image span {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: #fff;
 }
