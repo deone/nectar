@@ -1382,3 +1382,12 @@ p.copy a:hover{
   padding-left: .5em;
   font-size: 80%;
 }
+
+.social a {
+  color: inherit;
+}
+
+.social a:hover,
+.social a:visited {
+  text-decoration: none;
+}
