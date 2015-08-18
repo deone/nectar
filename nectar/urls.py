@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 
-from products.views import ProductList
+from products.views import ProductList, CategoryList
 
 urlpatterns = [
     url(r'^$', ProductList.as_view(), name='index'),
@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'^services/', TemplateView.as_view(template_name="services.html"), name="services"),
     url(r'^news/', TemplateView.as_view(template_name="news.html"), name="news"),
     url(r'^brands/', TemplateView.as_view(template_name="brands.html"), name="brands"),
-    url(r'^product-lines/', TemplateView.as_view(template_name="product-lines.html"), name="product-lines"),
+    url(r'^product-lines/', CategoryList.as_view(), name="product-lines"),
     url(r'^careers/', TemplateView.as_view(template_name="careers.html"), name="careers"),
     url(r'^contact-us/', TemplateView.as_view(template_name="contact.html"), name="contact-us"),
     url(r'^cart/', include('cart.urls', namespace="cart")),

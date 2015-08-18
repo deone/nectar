@@ -36,3 +36,10 @@ class BrandDetail(DetailView):
         brand = self.get_object()
         context['products'] = Product.objects.filter(subcategory__brand=brand)
         return context
+
+class CategoryList(ListView):
+    model = Category
+
+    def get_context_data(self, **kwargs):
+        context = super(CategoryList, self).get_context_data(**kwargs)
+        return context
