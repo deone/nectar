@@ -1362,6 +1362,11 @@ p.copy a:hover{
   padding-top: .5em;
 }
 
+.cart {
+  text-align: right;
+  padding-right: 0;
+}
+
 .cart i span {
   font-size: 80%;
 }
