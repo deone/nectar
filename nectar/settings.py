@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'products',
     'cart',
+    'contact',
 )
 
 MIDDLEWARE_CLASSES = (
