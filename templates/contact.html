@@ -5,9 +5,43 @@
 {% block title %}Contact Us{% endblock %}
 
 {% block secondary_content %}
-<div class="container features">
-  <div class="section-head text-center">
-    <h3><span class="frist"></span>Contact Us<span class="second"></span></h3>
+<div id="contact" class="getintouch">
+  <div class="container">
+    <div class="section-head text-center">
+      <h3><span class="frist"> </span>Contact Us<span class="second"> </span></h3>
+    </div>
+    <div class="row">
+      <div class="col-md-9">
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3964.6115190119085!2d3.4750835999999974!3d6.443900900000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1441460702526" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-3 contact-details">
+        <h4><strong>Address</strong></h4>
+        <p>Lekki Phase 1, Lagos, Nigeria.</p>
+        <h4><strong>Phone</strong></h4>
+        <p>1- 800-NECTARHUB</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="feedback">
+          Thank you for contacting Nectar Beauty Hub. We will respond to your enquiry shortly.
+        </p>
+        <div class="contact-form">
+          <h3>Get In Touch</h3>
+          <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="text"  placeholder="Email" required>
+            <input type="text"  placeholder="Phone Number" required>
+            <input type="text"  placeholder="Country" required>
+            <input type="text"  placeholder="Subject" required>
+            <textarea placeholder="Message" required> </textarea>
+            <input type="submit" value="Send message">
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
