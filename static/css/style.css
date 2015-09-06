@@ -699,7 +699,7 @@ span.second{
 	border-right: none;
 	border-left: none;
 	border-top: none;
-	border-bottom: 1px solid #DBDBDB;
+	border-bottom: 2px solid #DBDBDB;
 	outline: none;
 	padding: 1em 0 1em 0;
 	font-size: 0.9em;
@@ -707,7 +707,6 @@ span.second{
 .contact-form textarea {
 	height:130px;
 	outline:none;
-	border-bottom: 1px ridge #DBDBDB;
 	resize:none;
 }
 .contact-form input[type="submit"]{
@@ -1419,7 +1418,7 @@ p.copy a:hover{
   border: solid 1px #eee;
 }
 
-.map, .contact-form {
+.map, .contact-form, .feedback {
   margin-bottom: 3em;
 }
 
