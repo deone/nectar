@@ -117,3 +117,16 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+CONTACT_SUBJECT = 'Contact Request At NectarBeautyHub.com'
+
+QUOTE_REQUEST_SUBJECT = 'Quote Request At NectarBeautyHub.com'
+
+DEFAULT_FROM_EMAIL = 'info@nectarbeautyhub.com'
+
+DEFAULT_TO_EMAIL = 'alwaysdeone@gmail.com'
+
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'deone'
+EMAIL_HOST_PASSWORD = 'maIl@48_'
