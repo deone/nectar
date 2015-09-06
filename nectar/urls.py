@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from products.views import ProductList, CategoryList, BrandList
+from contact.views import index
 
 urlpatterns = [
     url(r'^$', ProductList.as_view(), name='index'),
@@ -29,7 +30,7 @@ urlpatterns = [
     url(r'^brands/', BrandList.as_view(), name="brands"),
     url(r'^product-lines/', CategoryList.as_view(), name="product-lines"),
     url(r'^careers/', TemplateView.as_view(template_name="careers.html"), name="careers"),
-    url(r'^contact-us/', TemplateView.as_view(template_name="contact.html"), name="contact-us"),
+    url(r'^contact-us/', index, name="contact-us"),
     url(r'^cart/', include('cart.urls', namespace="cart")),
     url(r'^products/', include('products.urls', namespace="products")),
     url(r'^admin/', include(admin.site.urls)),
