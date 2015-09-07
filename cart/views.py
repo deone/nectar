@@ -2,11 +2,16 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 from .helpers import *
+from .forms import RequestQuoteForm
 
 from products.models import Product
 
 def index(request):
-    context = {}
+    if request.method == 'POST':
+        form = RequestQuoteForm(request.POST)
+    else:
+        form = RequestQuoteForm()
+    context = {'form': form}
     return render(request, 'cart/index.html', context)
 
 def add(request, id):

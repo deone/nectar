@@ -728,6 +728,14 @@ span.second{
 	opacity:0.9;
 	color:#999;
 }
+.nectar-form .radios {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #DBDBDB;
+}
+.nectar-form .radios label {
+  font-weight: normal;
+}
 /*----*/
 .footer-social-icons{
 	margin:0;padding:0;
