@@ -16,3 +16,9 @@ class LineItem(models.Model):
     cart = models.ForeignKey(Cart)
     product = models.ForeignKey(Product)
     quantity = models.SmallIntegerField()
+
+    def to_dict(self):
+        return {
+            'product': self.product.to_dict(),
+            'quantity': self.quantity
+        }

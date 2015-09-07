@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.conf import settings
 
 from .helpers import *
 from .forms import RequestQuoteForm
 
 from products.models import Product
+from contact.helpers import send_email
 
 def index(request):
     if request.method == 'POST':
@@ -19,7 +21,9 @@ def index(request):
                 'delivery_method': form.cleaned_data['delivery_method']
             }
             cart = create_cart(request.session['cart'], customer_info)
-            # send_quote_request_email(cart)
+            customer_info['items'] = [item.to_dict() for item in cart.lineitem_set.all()]
+            if cart:
+                send_email(settings.QUOTE_REQUEST_SUBJECT, customer_info, 'cart/quote_request_email.html')
     else:
         form = RequestQuoteForm()
     context = {'form': form}
@@ -29,7 +33,7 @@ def add(request, id):
     cart = fetch_cart(request)
 
     product = Product.objects.get(id=id)
-    product_dict = {product.pk: {'product_pk': product.pk, 'quantity': 1, 'product': to_dict(product)}}
+    product_dict = {product.pk: {'product_pk': product.pk, 'quantity': 1, 'product': product.to_dict()}}
 
     if cart:
         pk = str(product.pk)

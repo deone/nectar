@@ -67,6 +67,15 @@ class Product(Common):
     def __str__(self):
         return self.name
 
+    def to_dict(self):
+        return {
+            'product_pk': self.pk,
+            'name': self.name,
+            'code': self.code,
+            'brand': self.subcategory.brand.name,
+            'image': self.image.url
+        }
+
     @models.permalink
     def get_absolute_url(self):
         return 'products:product', (self.slug,)
