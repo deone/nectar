@@ -1,3 +1,6 @@
+from .models import *
+from products.models import Product
+
 def fetch_cart(request):
     try:
         cart = request.session['cart']
@@ -14,3 +17,13 @@ def to_dict(product):
         'brand': product.subcategory.brand.name,
         'image': product.image.url
     }
+
+def create_cart(cart_session_obj, customer_info):
+    cart = Cart(**customer_info)
+    cart.save()
+    for k, v in cart_session_obj.items():
+        product = Product.objects.get(pk=k)
+        quantity = v['quantity']
+        LineItem.objects.create(cart=cart, product=product, quantity=quantity)
+
+    return cart

@@ -9,6 +9,17 @@ from products.models import Product
 def index(request):
     if request.method == 'POST':
         form = RequestQuoteForm(request.POST)
+        if form.is_valid():
+            customer_info = {
+                'business_name': form.cleaned_data['business_name'],
+                'account_number': form.cleaned_data['account_number'],
+                'contact_name': form.cleaned_data['contact_name'],
+                'contact_number': form.cleaned_data['contact_number'],
+                'contact_email': form.cleaned_data['contact_email'],
+                'delivery_method': form.cleaned_data['delivery_method']
+            }
+            cart = create_cart(request.session['cart'], customer_info)
+            # send_quote_request_email(cart)
     else:
         form = RequestQuoteForm()
     context = {'form': form}
