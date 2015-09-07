@@ -1,0 +1,24 @@
+{% load i18n %}{% autoescape off %}
+{% blocktrans %}Someone has just filled out the contact form at NectarBeautyHub.com!{% endblocktrans %}
+
+{% trans "Here are the details:" %}
+
+{% trans "Full Name" %}
+{{ full_name }}
+
+{% trans "Email" %}
+{{ email }}
+
+{% trans "Phone Number" %}
+{{ phone_number }}
+
+{% trans "Country" %}
+{{ country }}
+
+{% trans "Subject" %}
+{{ subject }}
+
+{% trans "Message" %}
+{{ message }}
+
+{% endautoescape %}

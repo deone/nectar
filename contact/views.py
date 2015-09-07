@@ -17,7 +17,7 @@ def index(request):
                   'subject': form.cleaned_data['subject'],
                   'message': form.cleaned_data['message'],
                 }
-            send_email(settings.CONTACT_SUBJECT, info, 'contact/contact_info_email.html')
+            send_email(settings.CONTACT_SUBJECT, info, 'contact/contact_info_email.html', 'contact/contact_info_email.txt')
             context.update({'feedback': 'Thank you for contacting Nectar Beauty Hub. We will respond to your enquiry shortly.'})
     else:
         form = ContactForm()

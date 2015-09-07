@@ -124,7 +124,7 @@ QUOTE_REQUEST_SUBJECT = 'Quote Request At NectarBeautyHub.com'
 
 DEFAULT_FROM_EMAIL = 'info@nectarbeautyhub.com'
 
-DEFAULT_TO_EMAIL = 'alwaysdeone@gmail.com'
+DEFAULT_TO_EMAIL = 'dayo@incisia.com'
 
 EMAIL_HOST = 'smtp.webfaction.com'
 EMAIL_PORT = 25

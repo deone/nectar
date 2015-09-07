@@ -1,24 +1,24 @@
 {% load i18n %}{% autoescape off %}
-{% blocktrans %}Someone has just filled out the contact form at NectarBeautyHub.com!{% endblocktrans %}
+{% blocktrans %}<p>Someone has just filled out the contact form at NectarBeautyHub.com!</p>{% endblocktrans %}
 
-{% trans "Here are the details:" %}
+{% trans "<p>Here are the details:</p>" %}
 
-{% trans "Full Name" %}
-{{ full_name }}
+{% trans "<p><strong>Full Name</strong></p>" %}
+<p>{{ full_name }}</p>
 
-{% trans "Email" %}
-{{ email }}
+{% trans "<p><strong>Email</strong></p>" %}
+<p>{{ email }}</p>
 
-{% trans "Phone Number" %}
-{{ phone_number }}
+{% trans "<p><strong>Phone Number</strong></p>" %}
+<p>{{ phone_number }}</p>
 
-{% trans "Country" %}
-{{ country }}
+{% trans "<p><strong>Country</strong></p>" %}
+<p>{{ country }}</p>
 
-{% trans "Subject" %}
-{{ subject }}
+{% trans "<p><strong>Subject</strong></p>" %}
+<p>{{ subject }}</p>
 
-{% trans "Message" %}
-{{ message }}
+{% trans "<p><strong>Message</strong></p>" %}
+<p>{{ message }}</p>
 
 {% endautoescape %}
