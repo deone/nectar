@@ -685,16 +685,16 @@ span.second{
 }
 /*---- //featured -----*/
 /*--- getintouch -----*/
-.contact-form h3{
+.nectar-form h3{
 	color:#282528;
 	font-size:1.2em;
 	font-weight:600;
 	margin:1em 0;
 }
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="number"],
-.contact-form textarea {
+.nectar-form input[type="text"],
+.nectar-form input[type="email"],
+.nectar-form input[type="number"],
+.nectar-form textarea {
 	width: 100%;
 	border-right: none;
 	border-left: none;
@@ -704,12 +704,12 @@ span.second{
 	padding: 1em 0 1em 0;
 	font-size: 0.9em;
 }
-.contact-form textarea {
+.nectar-form textarea {
 	height:130px;
 	outline:none;
 	resize:none;
 }
-.contact-form input[type="submit"]{
+.nectar-form input[type="submit"]{
 	background: url(../images/msg-icon.png) no-repeat 0px 0px;
 	height: 23px;
 	width: 167px;
@@ -724,7 +724,7 @@ span.second{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
-.contact-form input[type="submit"]:hover {
+.nectar-form input[type="submit"]:hover {
 	opacity:0.9;
 	color:#999;
 }
@@ -1418,7 +1418,7 @@ p.copy a:hover{
   border: solid 1px #eee;
 }
 
-.map, .contact-form, .feedback {
+.map, .nectar-form, .feedback {
   margin-bottom: 3em;
 }
 
