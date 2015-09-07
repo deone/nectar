@@ -13,3 +13,5 @@ STATIC_URL = "http://nectarbeautyhub.com/static/"
 MEDIA_ROOT = "/home/deone/webapps/nectar_media"
 
 MEDIA_URL = "/media/"
+
+DEFAULT_TO_EMAIL = 'beatrice@nectarbeautyhub.com'
