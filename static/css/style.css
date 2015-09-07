@@ -729,12 +729,18 @@ span.second{
 	color:#999;
 }
 .nectar-form .radios {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   padding-top: 1em;
   padding-bottom: 1em;
-  border-bottom: 2px solid #DBDBDB;
 }
 .nectar-form .radios label {
   font-weight: normal;
+}
+.nectar-form .radios li {
+  display: inline-block;
+  width: 10em;
 }
 /*----*/
 .footer-social-icons{

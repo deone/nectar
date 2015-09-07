@@ -69,11 +69,12 @@
           {{ form.contact_email.errors }}
           {{ form.contact_email }}
 
-          <div class="radios">
-            {% for radio in form.delivery_method %}
-              {{ radio }}
-            {% endfor %}
-          </div>
+          {{ form.delivery_method.errors }}
+          <ul class="radios">
+          {% for radio in form.delivery_method %}
+            <li>{{ radio }}</li>
+          {% endfor %}
+          </ul>
           <input type="submit" value="Request Quote">
         </form>
       </div>
