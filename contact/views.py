@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 
 from .forms import ContactForm
-from .helpers import send_contact_request_mail
+from .helpers import send_email
 
 def index(request):
     context = {}
@@ -17,7 +17,7 @@ def index(request):
                   'subject': form.cleaned_data['subject'],
                   'message': form.cleaned_data['message'],
                 }
-            send_contact_request_mail(settings.CONTACT_SUBJECT, info, settings.DEFAULT_FROM_EMAIL, settings.DEFAULT_TO_EMAIL)
+            send_email(settings.CONTACT_SUBJECT, info, 'contact/contact_info_email.html')
             context.update({'feedback': 'Thank you for contacting Nectar Beauty Hub. We will respond to your enquiry shortly.'})
     else:
         form = ContactForm()

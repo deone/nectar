@@ -1,0 +1,30 @@
+{% load i18n %}{% autoescape off %}
+{% blocktrans %}Someone has just requested a quote at NectarBeautyHub.com!{% endblocktrans %}
+
+{% trans "Here are the details:" %}
+
+{% trans "Name of Business" %}
+{{ business_name }}
+
+{% trans "Nectar Beauty Hub Account Number" %}
+{{ account_number }}
+
+<ul>
+{% for item in items %}
+  <li>{{ item.product.name }}{{ item.quantity }}</li>
+{% endfor %}
+</ul>
+
+{% trans "Contact Name" %}
+{{ contact_name }}
+
+{% trans "Contact Number" %}
+{{ contact_number }}
+
+{% trans "Contact Email" %}
+{{ contact_email }}
+
+{% trans "Delivery Method" %}
+{{ delivery_method }}
+
+{% endautoescape %}

@@ -9,15 +9,6 @@ def fetch_cart(request):
 
     return cart
 
-def to_dict(product):
-    return {
-        'product_pk': product.pk,
-        'name': product.name,
-        'code': product.code,
-        'brand': product.subcategory.brand.name,
-        'image': product.image.url
-    }
-
 def create_cart(cart_session_obj, customer_info):
     cart = Cart(**customer_info)
     cart.save()
