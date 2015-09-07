@@ -1,30 +1,50 @@
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    text-align: left;
+  }
+</style>
+
 {% load i18n %}{% autoescape off %}
-{% blocktrans %}Someone has just requested a quote at NectarBeautyHub.com!{% endblocktrans %}
+{% blocktrans %}<p>Someone has just requested a quote at NectarBeautyHub.com!</p>{% endblocktrans %}
 
-{% trans "Here are the details:" %}
+{% trans "<p>Here are the details:</p>" %}
 
-{% trans "Name of Business" %}
-{{ business_name }}
+{% trans "<p><strong>Name of Business</strong></p>" %}
+<p>{{ business_name }}</p>
 
-{% trans "Nectar Beauty Hub Account Number" %}
-{{ account_number }}
+{% trans "<p><strong>Nectar Beauty Hub Account Number</strong></p>" %}
+<p>{{ account_number }}</p>
 
-<ul>
-{% for item in items %}
-  <li>{{ item.product.name }}{{ item.quantity }}</li>
-{% endfor %}
-</ul>
+{% trans "<p><strong>Requested Products</strong></p>" %}
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Quantity</th>
+  </tr>
+  {% for item in items %}
+    <tr>
+      <td>{{ item.product.name }}</td>
+      <td>{{ item.quantity }}</td>
+    </tr>
+  {% endfor %}
+</table>
 
-{% trans "Contact Name" %}
-{{ contact_name }}
+{% trans "<p><strong>Contact Name</strong></p>" %}
+<p>{{ contact_name }}</p>
 
-{% trans "Contact Number" %}
-{{ contact_number }}
+{% trans "<p><strong>Contact Number</strong></p>" %}
+<p>{{ contact_number }}</p>
 
-{% trans "Contact Email" %}
-{{ contact_email }}
+{% trans "<p><strong>Contact Email</strong></p>" %}
+<p>{{ contact_email }}</p>
 
-{% trans "Delivery Method" %}
-{{ delivery_method }}
+{% trans "<p><strong>Delivery Method</strong></p>" %}
+<p>{{ delivery_method }}</p>
 
 {% endautoescape %}

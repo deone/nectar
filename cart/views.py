@@ -23,7 +23,7 @@ def index(request):
             cart = create_cart(request.session['cart'], customer_info)
             customer_info['items'] = [item.to_dict() for item in cart.lineitem_set.all()]
             if cart:
-                send_email(settings.QUOTE_REQUEST_SUBJECT, customer_info, 'cart/quote_request_email.html')
+                send_email(settings.QUOTE_REQUEST_SUBJECT, customer_info, 'cart/quote_request_email.html', 'cart/quote_request_email.txt')
     else:
         form = RequestQuoteForm()
     context = {'form': form}
