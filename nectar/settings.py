@@ -126,7 +126,7 @@ DEFAULT_FROM_EMAIL = 'info@nectarbeautyhub.com'
 
 DEFAULT_TO_EMAIL = 'dayo@incisia.com'
 
-EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST = '74.55.86.74'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'deone'
-EMAIL_HOST_PASSWORD = 'maIl@48_'
+EMAIL_HOST_PASSWORD = '@dune369'
