@@ -427,8 +427,14 @@ body a {
   margin: 3.5em 0 0 0;
 }
 .logo {
-  margin-top: -.2em;
+  margin-top: -1.2em;
   text-align: left;
+}
+.logo a p {
+  margin-top: .5em;
+  font-size: .85em;
+  text-align: center;
+  color: #000;
 }
 .header ul,
 .header ul li {
