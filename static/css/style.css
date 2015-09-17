@@ -425,7 +425,8 @@ body a {
   position:relative;
 }
 .header {
-  margin: 3.5em 0 0 0;
+  margin: 1.5em 0 0 0;
+  height: 7.5em;
 }
 .logo {
   margin-top: -1.2em;
@@ -1418,6 +1419,10 @@ p.copy a:hover{
 
 .header-section .social a img {
   width: 20px;
+}
+
+.news img {
+  width: 100%;
 }
 
 .social {
