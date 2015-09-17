@@ -263,6 +263,7 @@ body a {
   width: 100%;
   padding: 0;
   margin: 0;
+  margin-bottom: 3em;
 }
 .rslides li {
   -webkit-backface-visibility: hidden;
@@ -420,7 +421,7 @@ body a {
 }
 .header-section {
   background: #fafafa;
-  padding-bottom: 3.5em;
+  /* padding-bottom: 3.5em; */
   position:relative;
 }
 .header {
@@ -429,6 +430,9 @@ body a {
 .logo {
   margin-top: -1.2em;
   text-align: left;
+}
+.logo a {
+  text-decoration: none;
 }
 .logo a p {
   margin-top: .5em;
@@ -1404,8 +1408,29 @@ p.copy a:hover{
   font-size: 80%;
 }
 
+.header .row {
+  margin-bottom: .5em;
+}
+
+.header-section .social {
+  margin-right: 1.6em;
+}
+
+.header-section .social a img {
+  width: 20px;
+}
+
+.social {
+  text-align: right;
+}
+
 .social a {
   color: inherit;
+}
+
+.footer-grid .social a img {
+  text-align: center;
+  width: 50px;
 }
 
 .social a:hover,

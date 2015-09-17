@@ -59,6 +59,21 @@
     <div class="header-section">
       <div class="container">
         <div class="header">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="social">
+                <a target="_blank" href="http://facebook.com/NectarBeautyHub">
+                  <img src="{% static 'images/facebook.svg' %}" title="Facebook">
+                </a>
+                <a target="_blank" href="http://twitter.com/NectarHub">
+                  <img src="{% static 'images/twitter.svg' %}" title="Twitter">
+                </a>
+                <a target="_blank" href="http://instagram.com/nectarbeautyhub">
+                  <img src="{% static 'images/instagram.svg' %}" title="Instagram">
+                </a>
+              </div>
+            </div>
+          </div>
           <div class="logo col-md-2">
             <a href="{% url 'index' %}">
               <img src="{% static 'images/logo.png' %}" title="logo">
@@ -98,7 +113,7 @@
 
       {% block primary_content %}{% endblock %}
 
-      <div class="clearfix"> </div>
+      <div class="clearfix"></div>
     </div>
 
     {% block secondary_content %}{% endblock %}
@@ -121,16 +136,16 @@
           </div>
 
           <div class="col-md-3 footer-grid">
-            <h3>Connect With Us</h3>
             <div class="social">
+              <h3>Connect With Us</h3>
               <a target="_blank" href="http://facebook.com/NectarBeautyHub">
-                <i class="fa fa-facebook-square fa-3x"></i>
+                <img src="{% static 'images/facebook.svg' %}">
               </a>
               <a target="_blank" href="http://twitter.com/NectarHub">
-                <i class="fa fa-twitter-square fa-3x"></i>
+                <img src="{% static 'images/twitter.svg' %}">
               </a>
               <a target="_blank" href="http://instagram.com/nectarbeautyhub">
-                <i class="fa fa-instagram fa-3x"></i>
+                <img src="{% static 'images/instagram.svg' %}">
               </a>
             </div>
           </div>
