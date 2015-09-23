@@ -16,7 +16,7 @@ class ProductDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(ProductDetail, self).get_context_data(**kwargs)
-        context['related_products'] = Product.objects.all()[:4]
+        context['related_products'] = Product.objects.exclude(pk=self.get_object().pk)[:4]
         return context
 
 class SubCategoryDetail(DetailView):
