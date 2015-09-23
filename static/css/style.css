@@ -1266,7 +1266,7 @@ p.copy a:hover{
 	}
 	.header-section {
 		padding: 0 0 2em 0;
-		background: #F9E514;
+		/* background: #F9E514; */
 	}
 	.slide-text ul{
 		display:none;
@@ -1294,7 +1294,7 @@ p.copy a:hover{
   background: #fff;
   margin-top: 2em;
   min-height: 420px;
-  /* padding: 1em; */
+  margin-bottom: 3em;
 }
 
 .product img, .product .detail {
@@ -1313,6 +1313,10 @@ p.copy a:hover{
 .detail {
   margin-left: 3.5em;
   width: 85%;
+}
+
+.detail h3 {
+  text-transform: capitalize;
 }
 
 .detail h3, .detail ul {
@@ -1489,4 +1493,9 @@ p.copy a:hover{
   padding: 0;
   font-size: 70%;
   color: red;
+}
+
+.box {
+  border: solid 1px #eee;
+  width: 100%;
 }
