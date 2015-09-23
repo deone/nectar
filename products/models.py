@@ -54,7 +54,7 @@ class SubCategory(Common):
 
 class Product(Common):
     subcategory = models.ForeignKey(SubCategory)
-    code = models.IntegerField(unique=True)
+    code = models.CharField(max_length=20, unique=True, null=True, blank=True)
     image = models.ImageField(upload_to="product_images")
     description = models.TextField()
     slug = models.SlugField(unique=True, editable=False)
