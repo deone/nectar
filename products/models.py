@@ -52,7 +52,8 @@ class SubCategory(Common):
     def get_absolute_url(self):
         return 'products:subcategory', (self.slug,)
 
-class Product(Common):
+class Product(models.Model):
+    name = models.CharField(max_length=100)
     subcategory = models.ForeignKey(SubCategory)
     code = models.CharField(max_length=20, unique=True, null=True, blank=True)
     image = models.ImageField(upload_to="product_images")
