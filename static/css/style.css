@@ -263,7 +263,7 @@ body a {
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 .rslides li {
   -webkit-backface-visibility: hidden;
@@ -1397,10 +1397,6 @@ p.copy a:hover{
 
 .cart i span {
   font-size: 80%;
-}
-
-.slides {
-  margin-top: 2em;
 }
 
 .features-grid-info h5 {
