@@ -438,7 +438,8 @@ html, body {
   color: inherit;
 }
 .header .cart a {
-  line-height: 2.4em;
+  line-height: 2.8em;
+  width: 175%;
 }
 /*----//slider----*/
 /*-----features----*/
