@@ -30,7 +30,7 @@
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     </script>
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,300,600,800,700' rel='stylesheet' type='text/css'>
 
     <!----start-top-nav-script---->
     <script>
@@ -60,18 +60,16 @@
       <div class="container">
         <div class="header">
           <div class="row">
-            <div class="col-md-12">
-              <div class="social">
-                <a target="_blank" href="http://facebook.com/NectarBeautyHub">
-                  <img src="{% static 'images/facebook.svg' %}" title="Facebook">
-                </a>
-                <a target="_blank" href="http://twitter.com/NectarHub">
-                  <img src="{% static 'images/twitter.svg' %}" title="Twitter">
-                </a>
-                <a target="_blank" href="http://instagram.com/nectarbeautyhub">
-                  <img src="{% static 'images/instagram.svg' %}" title="Instagram">
-                </a>
-              </div>
+            <div class="social">
+              <a target="_blank" href="http://facebook.com/NectarBeautyHub">
+                <img src="{% static 'images/facebook.svg' %}" title="Facebook">
+              </a>
+              <a target="_blank" href="http://twitter.com/NectarHub">
+                <img src="{% static 'images/twitter.svg' %}" title="Twitter">
+              </a>
+              <a target="_blank" href="http://instagram.com/nectarbeautyhub">
+                <img src="{% static 'images/instagram.svg' %}" title="Instagram">
+              </a>
             </div>
           </div>
           <div class="logo col-md-2">
@@ -80,7 +78,7 @@
               <p><i>Wholesale Beauty Outlet</i></p>
             </a>
           </div>
-          <ul class="col-md-8">
+          <ul class="col-md-9">
             <li class="col-sm-2"><a href="{% url 'index' %}">Home</a></li>
             <li class="col-sm-2">
               <a href="#" class="dropdown-toggle" id="aboutdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -99,8 +97,8 @@
             <li class="col-sm-2"><a href="{% url 'how-to-order' %}">How To Order</a></li>
             <li class="col-sm-2"><a href="{% url 'contact-us' %}">Contact Us</a></li>
           </ul>
-          <div class="cart col-md-2">
-            <a class="btn btn-primary btn-lg" href="{% url 'cart:index' %}" role="button">
+          <div class="cart col-md-1">
+            <a class="btn btn-primary" href="{% url 'cart:index' %}" role="button">
               <i class="fa fa-shopping-cart">
                 {% get_cart_count as count %}
                 <span> {{ count }}</span>

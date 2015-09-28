@@ -1,19 +1,7 @@
-html, body{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 100%;
+html, body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 105%;
     background-color: #FFF;
-}
-body a {
-	transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
-/*-----start-header----*/
-
-.logo320{
-	display:none;
 }
 /*----navbar-nav----*/
 .top-header {
@@ -28,24 +16,6 @@ body a {
   -o-box-shadow: 0px 0px 4px #C9C9C9;
   -ms-box-shadow: 0px 0px 4px #C9C9C9;
 }
-/* .top-nav ul li a {
-  color: #7E7C7E;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-}
-.top-nav ul li.active a,
-.top-nav ul li a:hover {
-	color:#282528;
-}
-.top-nav:before,
-.top-nav:after {
-    content: " ";
-    display: table;
-}
-.top-nav:after {
-    clear: both;
-} */
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 768px) {
 	nav { 
@@ -431,6 +401,8 @@ body a {
 .logo {
   margin-top: -1.2em;
   text-align: left;
+  margin-left: -1em;
+  padding-left: 0;
 }
 .logo a {
   text-decoration: none;
@@ -465,7 +437,8 @@ body a {
   text-decoration: none;
   color: inherit;
 }
-.header .cart {
+.header .cart a {
+  line-height: 2.4em;
 }
 /*----//slider----*/
 /*-----features----*/
@@ -1428,6 +1401,7 @@ p.copy a:hover{
 
 .social {
   text-align: right;
+  margin: 0 !important;
 }
 
 .social a {
