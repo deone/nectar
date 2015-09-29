@@ -62,7 +62,7 @@ class Product(models.Model):
     date_created = models.DateTimeField(auto_now=True, editable=False)
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
+        self.slug = slugify(self.name + '-' + self.code)
         super(Product, self).save(*args, **kwargs)
 
     def __str__(self):
