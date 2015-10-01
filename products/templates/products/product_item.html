@@ -6,8 +6,8 @@
       <ul>
         <li>
           <h5>
-            <a href="{{ product.subcategory.brand.get_absolute_url }}">
-              {{ product.subcategory.brand.name }}
+            <a href="{{ product.brand.get_absolute_url }}">
+              {{ product.brand.name }}
             </a>
           </h5>
           <h6>CODE: {% if not product.code %}Not Available{% else %}{{ product.code }}{% endif %}</h6>
