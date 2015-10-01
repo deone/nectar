@@ -34,7 +34,6 @@ class Brand(Common):
         return 'products:brand', (self.slug,)
 
 class SubCategory(Common):
-    brand = models.ForeignKey(Brand)
     category = models.ForeignKey(Category)
     slug = models.SlugField(unique=True, editable=False)
 
@@ -55,6 +54,7 @@ class SubCategory(Common):
 class Product(models.Model):
     name = models.CharField(max_length=100)
     subcategory = models.ForeignKey(SubCategory)
+    brand = models.ForeignKey(Brand)
     code = models.CharField(max_length=20, unique=True, null=True, blank=True)
     image = models.ImageField(upload_to="product_images")
     description = models.TextField()
