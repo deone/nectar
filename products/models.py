@@ -46,7 +46,7 @@ class SubCategory(models.Model):
         super(SubCategory, self).save(*args, **kwargs)
 
     def __str__(self):
-        return self.name
+        return '%s - %s' % (self.name, self.category.name)
 
     @models.permalink
     def get_absolute_url(self):
