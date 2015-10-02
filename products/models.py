@@ -33,7 +33,8 @@ class Brand(Common):
     def get_absolute_url(self):
         return 'products:brand', (self.slug,)
 
-class SubCategory(Common):
+class SubCategory(models.Model):
+    name = models.CharField(max_length=100)
     category = models.ForeignKey(Category)
     slug = models.SlugField(unique=True, editable=False)
 
