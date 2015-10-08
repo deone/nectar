@@ -5,6 +5,7 @@ from .models import *
 class ProductList(ListView):
     queryset = Product.objects.all()
     context_object_name = 'new_products'
+    paginate_by = 12
 
     def get_context_data(self, **kwargs):
         context = super(ProductList, self).get_context_data(**kwargs)

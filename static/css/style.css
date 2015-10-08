@@ -1471,3 +1471,8 @@ p.copy a:hover{
   border: solid 1px #eee;
   width: 100%;
 }
+
+.page-links {
+  text-align: right;
+  margin-right: 0;
+}

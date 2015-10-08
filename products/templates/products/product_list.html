@@ -48,6 +48,16 @@
   {% endfor %}
   </div>
 
+  {% if is_paginated %}
+  <div class="row page-links">
+    <span>
+      {% if page_obj.has_previous %}<a href="?page={{ page_obj.previous_page_number }}">previous</a>{% else %}previous{% endif %}
+      |
+      {% if page_obj.has_next %}<a href="?page={{ page_obj.next_page_number }}">next</a>{% else %}next{% endif %}
+    </span>
+  </div>
+  {% endif %} 
+
   <!-- <div class="row">
     <div class="col-md-4">What's New</div>
     <div class="col-md-4">Videos</div>
