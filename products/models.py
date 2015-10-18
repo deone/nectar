@@ -62,6 +62,9 @@ class Product(models.Model):
     slug = models.SlugField(unique=True, editable=False)
     date_created = models.DateTimeField(auto_now=True, editable=False)
 
+    class Meta:
+        ordering = ('-date_created',)
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name + '-' + self.code)
         super(Product, self).save(*args, **kwargs)
