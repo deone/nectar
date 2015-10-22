@@ -77,7 +77,6 @@ class Product(models.Model):
             'product_pk': self.pk,
             'name': self.name,
             'code': self.code,
-            'brand': self.subcategory.brand.name,
             'image': self.image.url
         }
 
