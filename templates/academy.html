@@ -4,6 +4,15 @@
 
 {% block title %}Careers{% endblock %}
 
+{% block primary_content %}
+<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+<script>
+  $(function () {
+    $(".rslides").responsiveSlides({});
+  });
+</script>
+{% endblock %}
+
 {% block secondary_content %}
 <div class="container features">
   <div class="section-head text-center">
@@ -11,7 +20,29 @@
   </div>
 
   <div class="row">
-    <div class="col-md-12" style="height: 300px; background: #ff0; margin-bottom: 40px;">dfhdf</div>
+    <ul class="rslides">
+      <li>
+        <img src="{% static 'images/nail_art_1.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/nail_art_2.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/nail_art_3.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/nail_art_4.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/nail_art_5.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/nail_art_6.jpg' %}" alt="">
+      </li>
+      <li>
+        <img src="{% static 'images/nail_art_7.jpg' %}" alt="">
+      </li>
+    </ul>
   </div>
 
   <div class="row">
