@@ -769,6 +769,7 @@ span.second{
 /*-----footer----*/
 .footer {
 	border-top: 10px solid #fafafa;
+        margin-bottom: 30px;
 }
 .footer-grid p{
 	font-size:0.875em;

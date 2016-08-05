@@ -127,57 +127,96 @@
 
     <div class="footer">
       <div class="container">
-        <div class="footer-grids">
-          <div class="col-md-3 footer-grid explore">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="{% url 'index' %}">Home</a></li>
-              <li><a href="{% url 'news' %}">News</a></li>
-              <li><a href="{% url 'services' %}">Salon Furniture &amp; 3D Design</a></li>
-              <li><a href="{% url 'careers' %}">Careers</a></li>
-              <li><a href="{% url 'contact-us' %}">Contact Us</a></li>
-            </ul>
-          </div> 
-
-          <div class="col-md-6 footer-grid explore">
-          </div>
-
-          <div class="col-md-3 footer-grid">
-            <div class="social">
-              <h3>Connect With Us</h3>
-              <a target="_blank" href="http://facebook.com/nectarbeautyng">
-                <img src="{% static 'images/facebook.svg' %}">
-              </a>
-              <a target="_blank" href="http://twitter.com/NectarHub">
-                <img src="{% static 'images/twitter.svg' %}">
-              </a>
-              <a target="_blank" href="http://instagram.com/nectarbeautyng">
-                <img src="{% static 'images/instagram.svg' %}">
-              </a>
+        <div class="row">
+          <div class="footer-grids">
+            <div class="col-md-3 footer-grid explore">
+              <div style="margin-left: -15px;">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="{% url 'index' %}">Home</a></li>
+                  <li><a href="{% url 'news' %}">News</a></li>
+                  <li><a href="{% url 'services' %}">Salon Furniture &amp; 3D Design</a></li>
+                  <li><a href="{% url 'careers' %}">Careers</a></li>
+                  <li><a href="{% url 'contact-us' %}">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-3 footer-grid">
+              <div style="margin-right: -15px;">
+                <div class="social">
+                  <h3>Connect With Us</h3>
+                  <a target="_blank" href="http://facebook.com/nectarbeautyng">
+                    <img src="{% static 'images/facebook.svg' %}">
+                  </a>
+                  <a target="_blank" href="http://twitter.com/NectarHub">
+                    <img src="{% static 'images/twitter.svg' %}">
+                  </a>
+                  <a target="_blank" href="http://instagram.com/nectarbeautyng">
+                    <img src="{% static 'images/instagram.svg' %}">
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="clearfix"></div>
-
-          <script type="text/javascript">
-                  $(document).ready(function() {
-                          /*
-                          var defaults = {
-                                  containerID: 'toTop', // fading element id
-                                  containerHoverID: 'toTopHover', // fading element hover id
-                                  scrollSpeed: 1200,
-                                  easingType: 'linear' 
-                          };
-                          */
-                          
-                          $().UItoTop({ easingType: 'easeOutQuart' });
-                          
-                  });
-          </script>
-          <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
         </div>
       </div>
     </div>
+    <!-- <div class="footer">
+      <div class="container" style="background: #ff0;">
+        <div class="row">
+          <div class="footer-grids">
+            <div class="col-md-3 footer-grid explore" style="background: #eee; padding-left: -15px;">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'news' %}">News</a></li>
+                <li><a href="{% url 'services' %}">Salon Furniture &amp; 3D Design</a></li>
+                <li><a href="{% url 'careers' %}">Careers</a></li>
+                <li><a href="{% url 'contact-us' %}">Contact Us</a></li>
+              </ul>
+            </div> 
+
+            <div class="col-md-6 footer-grid explore" style="background: #eee;">
+            </div>
+
+            <div class="col-md-3 footer-grid" style="margin-right: -15px; background: #eee;">
+              <div class="social">
+                <h3>Connect With Us</h3>
+                <a target="_blank" href="http://facebook.com/nectarbeautyng">
+                  <img src="{% static 'images/facebook.svg' %}">
+                </a>
+                <a target="_blank" href="http://twitter.com/NectarHub">
+                  <img src="{% static 'images/twitter.svg' %}">
+                </a>
+                <a target="_blank" href="http://instagram.com/nectarbeautyng">
+                  <img src="{% static 'images/instagram.svg' %}">
+                </a>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <script type="text/javascript">
+                    $(document).ready(function() {
+                            /*
+                            var defaults = {
+                                    containerID: 'toTop', // fading element id
+                                    containerHoverID: 'toTopHover', // fading element hover id
+                                    scrollSpeed: 1200,
+                                    easingType: 'linear' 
+                            };
+                            */
+                            
+                            $().UItoTop({ easingType: 'easeOutQuart' });
+                            
+                    });
+            </script>
+            <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
