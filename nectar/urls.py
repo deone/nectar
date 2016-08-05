@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^careers/', TemplateView.as_view(template_name="careers.html"), name="careers"),
     url(r'^contact-us/', index, name="contact-us"),
     url(r'^how-to-order/', TemplateView.as_view(template_name="how_to_order.html"), name="how-to-order"),
+    url(r'^nectar-academy/', TemplateView.as_view(template_name="academy.html"), name="academy"),
     url(r'^cart/', include('cart.urls', namespace="cart")),
     url(r'^products/', include('products.urls', namespace="products")),
     url(r'^admin/', include(admin.site.urls)),

@@ -16,6 +16,11 @@ html, body {
   -o-box-shadow: 0px 0px 4px #C9C9C9;
   -ms-box-shadow: 0px 0px 4px #C9C9C9;
 }
+.academy {
+  background: #337ab7;
+  color: #fff;
+  font-size: 98%;
+}
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 768px) {
 	nav { 

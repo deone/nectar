@@ -92,10 +92,19 @@
                 <!-- <li><a href="{% url 'careers' %}">Careers</a></li> -->
               </ul>
             </li>
-            <li class="col-sm-2"><a href="{% url 'brands' %}">Brands</a></li>
-            <li class="col-sm-2"><a href="{% url 'product-lines' %}">Product Lines</a></li>
+            <li class="col-sm-2">
+              <a href="#" class="dropdown-toggle" id="productsdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Products
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="productsdropdown">
+                <li><a href="{% url 'product-lines' %}">Product Lines</a></li>
+                <li><a href="{% url 'brands' %}">Brands</a></li>
+              </ul>
+            </li>
             <li class="col-sm-2"><a href="{% url 'how-to-order' %}">How To Order</a></li>
             <li class="col-sm-2"><a href="{% url 'contact-us' %}">Contact Us</a></li>
+            <li class="col-sm-2"><a href="{% url 'academy' %}" class="academy">Nectar Beauty Academy</a></li>
           </ul>
           <div class="cart col-md-1">
             <a class="btn btn-primary" href="{% url 'cart:index' %}" role="button">
